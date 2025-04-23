@@ -29,7 +29,7 @@ export function Footer() {
       <a href="/" className="text-2xl absolute left-1/2 -translate-x-1/2 font-semibold text-accent flex items-center">
         <img src={LogoTextImage} className="w-[56px] inline-block" />
       </a>
-      <p style={{ fontFamily: 'Inconsolata' }} className="text-bolt-elements-textPrimary text-sm">© 2024 bolt.io</p>
+      <p style={{ fontFamily: 'Inconsolata' }} className="text-bolt-elements-textPrimary text-sm">© 2024 tryfens.com</p>
     </footer>
   );
 }
