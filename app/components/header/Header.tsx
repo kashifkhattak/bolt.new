@@ -37,15 +37,18 @@ export function Header() {
       {!chat.started && (
         <div className="flex absolute left-1/2 -translate-x-1/2 items-center">
           <a href="https://x.com/tryfrens" target="_blank">
-            <img src={TwitterIcon} className="w-4 h-4 mx-4" />
+            <img src={TwitterIcon} className="w-5 h-5 mx-4" />
           </a>
           <a href="https://discord.gg/ckPnDd8rFN" target="_blank">
-            <img src={DiscordIcon} className="w-5 h-5 mr-4" />
+            <img src={DiscordIcon} className="w-6 h-6 mr-4" />
           </a>
           <a href="https://discord.gg/ckPnDd8rFN" target="_blank">
-            <img src={GithubIcon} className="w-4 h-4 mr-4" />
+            <img src={GithubIcon} className="w-5 h-5 mr-4" />
           </a>
         </div>
+      )}
+      {!chat.started && (
+        <span className="absolute right-4 px-4 truncate text-center text-bolt-elements-textPrimary">Build with Frens</span>
       )}
       {chat.started && (
         <ClientOnly>
