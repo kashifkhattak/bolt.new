@@ -13,10 +13,10 @@ export const loader = () => json({});
 
 export default function Index() {
   return (
-    <div className="flex flex-col h-full w-full">
+    <div style={{ backgroundImage: 'url(../../icons/background.png)' }} className="flex bg-cover bg-center flex-col h-full w-full">
       <Header />
       <ClientOnly fallback={<BaseChat />}>{() => <Chat />}</ClientOnly>
-      <div className="pt-10 bg-bolt-elements-background-depth-1">
+      <div className="pt-10">
         <Footer />
       </div>
     </div>

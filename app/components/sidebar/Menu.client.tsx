@@ -112,7 +112,7 @@ export function Menu() {
         <div className="p-4">
           <a
             href="/"
-            className="flex gap-2 items-center bg-bolt-elements-sidebar-buttonBackgroundDefault text-bolt-elements-sidebar-buttonText hover:bg-bolt-elements-sidebar-buttonBackgroundHover rounded-md p-2 transition-theme"
+            className="flex gap-2 items-center bg-[#66FF00] text-black hover:bg-[#66FF00] hover:text-black rounded-md p-2 transition-theme"
           >
             <span className="inline-block i-bolt:chat scale-110" />
             Start new chat
@@ -162,9 +162,6 @@ export function Menu() {
               )}
             </Dialog>
           </DialogRoot>
-        </div>
-        <div className="flex items-center border-t border-bolt-elements-borderColor p-4">
-          <ThemeSwitch className="ml-auto" />
         </div>
       </div>
     </motion.div>

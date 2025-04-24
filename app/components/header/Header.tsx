@@ -13,7 +13,7 @@ export function Header() {
   return (
     <header
       className={classNames(
-        'flex items-center justify-between border-b border-white/20 w-full bg-bolt-elements-background-depth-1 p-5 py-8 h-[var(--header-height)]',
+        'flex items-center justify-between border-b border-white/20 w-full bg-black/50 p-5 py-8 h-[var(--header-height)]',
         {
           'border-transparent': !chat.started,
           'border-bolt-elements-borderColor': chat.started,
@@ -52,9 +52,6 @@ export function Header() {
           >
             About
           </a>
-          <div className="flex items-center border-t border-bolt-elements-borderColor p-4">
-            <ThemeSwitch className="ml-auto" />
-          </div>
         </div>
       )}
       {chat.started && (

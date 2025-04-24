@@ -165,7 +165,7 @@ function Folder({ folder: { depth, name }, collapsed, selected = false, onClick 
       className={classNames('group', {
         'bg-transparent text-bolt-elements-item-contentDefault hover:text-bolt-elements-item-contentActive hover:bg-bolt-elements-item-backgroundActive':
           !selected,
-        'bg-bolt-elements-item-backgroundAccent text-bolt-elements-item-contentAccent': selected,
+        'bg-bolt-elements-item-backgroundAccent text-[#66FF00]': selected,
       })}
       depth={depth}
       iconClasses={classNames({
@@ -191,7 +191,7 @@ function File({ file: { depth, name }, onClick, selected, unsavedChanges = false
     <NodeButton
       className={classNames('group', {
         'bg-transparent hover:bg-bolt-elements-item-backgroundActive text-bolt-elements-item-contentDefault': !selected,
-        'bg-bolt-elements-item-backgroundAccent text-bolt-elements-item-contentAccent': selected,
+        'bg-bolt-elements-item-backgroundAccent text-[#66FF00]': selected,
       })}
       depth={depth}
       iconClasses={classNames('i-ph:file-duotone scale-98', {

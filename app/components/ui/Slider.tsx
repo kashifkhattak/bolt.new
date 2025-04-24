@@ -48,7 +48,7 @@ const SliderButton = memo(({ selected, children, setSelected }: SliderButtonProp
       className={classNames(
         'bg-transparent text-sm px-2.5 py-0.5 rounded-full relative',
         selected
-          ? 'text-bolt-elements-item-contentAccent'
+          ? 'text-black'
           : 'text-bolt-elements-item-contentDefault hover:text-bolt-elements-item-contentActive',
       )}
     >
@@ -57,7 +57,7 @@ const SliderButton = memo(({ selected, children, setSelected }: SliderButtonProp
         <motion.span
           layoutId="pill-tab"
           transition={{ duration: 0.2, ease: cubicEasingFn }}
-          className="absolute inset-0 z-0 bg-bolt-elements-item-backgroundAccent rounded-full"
+          className="absolute inset-0 z-0 bg-[#66FF00] rounded-full"
         ></motion.span>
       )}
     </button>

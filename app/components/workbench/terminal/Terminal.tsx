@@ -67,8 +67,9 @@ export const Terminal = memo(
       const terminal = terminalRef.current!;
 
       // we render a transparent cursor in case the terminal is readonly
-      terminal.options.theme = getTerminalTheme(readonly ? { cursor: '#00000000' } : {});
-
+      terminal.options.theme = getTerminalTheme(
+        readonly ? { cursor: '#00000000', foreground: '#66FF00' } : { foreground: '#66FF00' },
+      );
       terminal.options.disableStdin = readonly;
     }, [theme, readonly]);
 
@@ -76,7 +77,9 @@ export const Terminal = memo(
       return {
         reloadStyles: () => {
           const terminal = terminalRef.current!;
-          terminal.options.theme = getTerminalTheme(readonly ? { cursor: '#00000000' } : {});
+          terminal.options.theme = getTerminalTheme(
+            readonly ? { cursor: '#00000000', foreground: '#66FF00' } : { foreground: '#66FF00' },
+          );
         },
       };
     }, []);

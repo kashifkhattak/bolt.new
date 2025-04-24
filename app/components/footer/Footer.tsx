@@ -2,7 +2,7 @@ import LogoTextImage from '../../../icons/logo-text.png';
 
 export function Footer() {
   return (
-    <footer className="p-5 relative bg-bolt-elements-background-depth-1 h-[var(--header-height)] py-8 w-full border-t border-white/20 flex items-center justify-between">
+    <footer className="p-5 relative bg-black/50 h-[var(--header-height)] py-8 w-full border-t border-white/20 flex items-center justify-between">
       <div className="flex items-center">
         <a
           style={{ fontFamily: 'Inconsolata' }}

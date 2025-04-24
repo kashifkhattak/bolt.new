@@ -7,6 +7,10 @@ import { Workbench } from '~/components/workbench/Workbench.client';
 import { classNames } from '~/utils/classNames';
 import { Messages } from './Messages.client';
 import { SendButton } from './SendButton.client';
+import TodoIcon from '../../../icons/todo.svg';
+import TetrisIcon from '../../../icons/tetris.svg';
+import TimeTrackerIcon from '../../../icons/time-tracker.svg';
+import SpaceInvaderIcon from '../../../icons/space-invaders.svg';
 
 import styles from './BaseChat.module.scss';
 
@@ -28,11 +32,10 @@ interface BaseChatProps {
 }
 
 const EXAMPLE_PROMPTS = [
-  { text: 'Build a todo app in React using Tailwind' },
-  { text: 'Build a simple blog using Astro' },
-  { text: 'Create a cookie consent form using Material UI' },
-  { text: 'Make a space invaders game' },
-  { text: 'How do I center a div?' },
+  { text: 'Build a todo app in React using Tailwind', icon: TodoIcon, label: 'TODO APP' },
+  { text: 'Build an employee time tracking app using React', icon: TimeTrackerIcon, label: 'TIME TRACKER' },
+  { text: 'Make a tetris game', icon: TetrisIcon, label: 'TETRIS' },
+  { text: 'Make a space invaders game', icon: SpaceInvaderIcon, label: 'SPACE INVADERS' },
 ];
 
 const TEXTAREA_MIN_HEIGHT = 76;
@@ -62,10 +65,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
     return (
       <div
         ref={ref}
-        className={classNames(
-          styles.BaseChat,
-          'relative flex h-full w-full overflow-hidden bg-bolt-elements-background-depth-1',
-        )}
+        className={classNames(styles.BaseChat, 'relative flex h-full w-full overflow-hidden')}
         data-chat-visible={showChat}
       >
         <ClientOnly>{() => <Menu />}</ClientOnly>
@@ -113,7 +113,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                 >
                   <textarea
                     ref={textareaRef}
-                    className={`w-full pl-4 pt-4 pr-16 focus:outline-none resize-none text-md text-bolt-elements-textPrimary placeholder-bolt-elements-textTertiary bg-transparent`}
+                    className={`w-full pl-4 pt-4 pr-16 focus:outline-none resize-none text-md text-[#66FF00] placeholder:text-[#66FF00] bg-transparent`}
                     onKeyDown={(event) => {
                       if (event.key === 'Enter') {
                         if (event.shiftKey) {
@@ -159,7 +159,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                         disabled={input.length === 0 || enhancingPrompt}
                         className={classNames({
                           'opacity-100!': enhancingPrompt,
-                          'text-bolt-elements-item-contentAccent! pr-1.5 enabled:hover:bg-bolt-elements-item-backgroundAccent!':
+                          'text-[#66FF00]! pr-1.5 enabled:hover:bg-bolt-elements-item-backgroundAccent!':
                             promptEnhanced,
                         })}
                         onClick={() => enhancePrompt?.()}
@@ -184,12 +184,13 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                     ) : null}
                   </div>
                 </div>
-                <div className="bg-bolt-elements-background-depth-1 pb-6">{/* Ghost Element */}</div>
+                <div className="pb-6">{/* Ghost Element */}</div>
               </div>
             </div>
             {!chatStarted && (
-              <div id="examples" className="relative w-full max-w-xl mx-auto mt-8 flex justify-center">
-                <div className="flex flex-col space-y-2 [mask-image:linear-gradient(to_bottom,black_0%,transparent_180%)] hover:[mask-image:none]">
+              <div id="examples" className="border bg-[#0a380a4d] max-w-2xl relative w-full mx-auto border-[#3fff3f4d] p-4 rounded-[4px]">
+                <div className="mb-4 text-sm text-[#3fff3f] opacity-70">EXAMPLE OPERATIONS</div>
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 max-w-2xl">
                   {EXAMPLE_PROMPTS.map((examplePrompt, index) => {
                     return (
                       <button
@@ -198,10 +199,16 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                           sendMessage?.(event, examplePrompt.text);
                         }}
                         style={{ fontFamily: 'Inter' }}
-                        className="group flex items-center w-full gap-2 justify-center bg-transparent text-bolt-elements-textTertiary hover:text-bolt-elements-textPrimary transition-theme"
+                        className="cursor-pointer overflow-hidden rounded opacity-70 group relative aspect-square border-2 border-[#3fff3f] bg-[#0a380a] transition-all duration-200 hover:bg-[#0f4b0f]"
                       >
-                        {examplePrompt.text}
-                        <div className="i-ph:arrow-bend-down-left" />
+                        <div className="absolute inset-0 flex flex-col items-center justify-center">
+                          <div className="text-2xl text-[#3fff3f] i-ph:terminal-window-bold">
+                            <img src={examplePrompt.icon} />
+                          </div>
+                          <div className="mt-2 text-xs font-bold tracking-wide text-[#3fff3f]">
+                            {examplePrompt.label}
+                          </div>
+                        </div>
                       </button>
                     );
                   })}

@@ -26,7 +26,7 @@ function getEditorTheme(settings: EditorSettings) {
     '&.cm-editor': {
       height: '100%',
       background: 'var(--cm-backgroundColor)',
-      color: 'var(--cm-textColor)',
+      color: '#66FF00',
     },
     '.cm-cursor': {
       borderLeft: 'var(--cm-cursor-width) solid var(--cm-cursor-backgroundColor)',
@@ -57,7 +57,7 @@ function getEditorTheme(settings: EditorSettings) {
     '.cm-gutters': {
       background: 'var(--cm-gutter-backgroundColor)',
       borderRight: 0,
-      color: 'var(--cm-gutter-textColor)',
+      color: '#66FF00',
     },
     '.cm-gutter': {
       '&.cm-lineNumbers': {
@@ -67,7 +67,7 @@ function getEditorTheme(settings: EditorSettings) {
       },
       '& .cm-activeLineGutter': {
         background: 'transparent',
-        color: 'var(--cm-gutter-activeLineTextColor)',
+        color: '#66FF00',
       },
       '&.cm-foldGutter .cm-gutterElement > .fold-icon': {
         cursor: 'pointer',
