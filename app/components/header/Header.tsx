@@ -42,7 +42,7 @@ export function Header() {
           <a href="https://discord.gg/ckPnDd8rFN" target="_blank">
             <img src={DiscordIcon} className="w-6 h-6 mr-4" />
           </a>
-          <a href="https://discord.gg/ckPnDd8rFN" target="_blank">
+          <a href="https://github.com/papibar/frens.git" target="_blank">
             <img src={GithubIcon} className="w-5 h-5 mr-4" />
           </a>
         </div>
