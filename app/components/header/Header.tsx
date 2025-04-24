@@ -5,7 +5,6 @@ import { classNames } from '~/utils/classNames';
 import { HeaderActionButtons } from './HeaderActionButtons.client';
 import { ChatDescription } from '~/lib/persistence/ChatDescription.client';
 import LogoTextImage from '../../../icons/logo-text.png';
-import { ThemeSwitch } from '../ui/ThemeSwitch';
 
 export function Header() {
   const chat = useStore(chatStore);
@@ -29,31 +28,7 @@ export function Header() {
       <span className="flex-1 px-4 truncate text-center text-bolt-elements-textPrimary">
         <ClientOnly>{() => <ChatDescription />}</ClientOnly>
       </span>
-      {!chat.started && (
-        <div className="flex grow w-full items-center justify-end">
-          <a
-            style={{ fontFamily: 'Inconsolata' }}
-            className="text-sm font-medium hover:bg-white/10 rounded-md px-4 py-2 text-bolt-elements-textPrimary"
-            href="#"
-          >
-            Market Place
-          </a>
-          <a
-            style={{ fontFamily: 'Inconsolata' }}
-            className="text-sm font-medium hover:bg-white/10 rounded-md px-4 py-2 text-bolt-elements-textPrimary"
-            href="#"
-          >
-            Login
-          </a>
-          <a
-            style={{ fontFamily: 'Inconsolata' }}
-            className="text-sm font-medium hover:bg-white/10 rounded-md px-4 py-2 text-bolt-elements-textPrimary"
-            href="#"
-          >
-            About
-          </a>
-        </div>
-      )}
+      {!chat.started && <></>}
       {chat.started && (
         <ClientOnly>
           {() => (
