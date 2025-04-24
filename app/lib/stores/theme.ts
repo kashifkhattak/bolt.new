@@ -8,7 +8,7 @@ export function themeIsDark() {
   return themeStore.get() === 'dark';
 }
 
-export const DEFAULT_THEME = 'light';
+export const DEFAULT_THEME = 'dark';
 
 export const themeStore = atom<Theme>(initStore());
 
@@ -17,7 +17,7 @@ function initStore() {
     const persistedTheme = localStorage.getItem(kTheme) as Theme | undefined;
     const themeAttribute = document.querySelector('html')?.getAttribute('data-theme');
 
-    return persistedTheme ?? (themeAttribute as Theme) ?? DEFAULT_THEME;
+    return DEFAULT_THEME as Theme;
   }
 
   return DEFAULT_THEME;
