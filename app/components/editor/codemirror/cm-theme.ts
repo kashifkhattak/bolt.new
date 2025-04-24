@@ -38,7 +38,11 @@ function getEditorTheme(settings: EditorSettings) {
       },
     },
     '.cm-line': {
+      color: "#66FF00 !important",
       padding: '0 0 0 4px',
+    },
+    '.cm-line > span': {
+      color: "#66FF00 !important",
     },
     '&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground': {
       backgroundColor: 'var(--cm-selection-backgroundColorFocused) !important',
