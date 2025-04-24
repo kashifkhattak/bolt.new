@@ -16,9 +16,6 @@ export default function Index() {
     <div style={{ backgroundImage: 'url(/background.png)' }} className="flex bg-cover bg-center flex-col h-full w-full">
       <Header />
       <ClientOnly fallback={<BaseChat />}>{() => <Chat />}</ClientOnly>
-      <div className="pt-10">
-        <Footer />
-      </div>
     </div>
   );
 }

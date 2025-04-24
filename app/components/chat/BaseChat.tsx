@@ -65,11 +65,11 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
     return (
       <div
         ref={ref}
-        className={classNames(styles.BaseChat, 'relative flex h-full w-full overflow-hidden')}
+        className={classNames(styles.BaseChat, 'relative mb-10 flex h-full w-full overflow-hidden')}
         data-chat-visible={showChat}
       >
         <ClientOnly>{() => <Menu />}</ClientOnly>
-        <div ref={scrollRef} className="flex overflow-y-auto w-full h-full">
+        <div ref={scrollRef} className="flex overflow-y-auto grow w-full h-full">
           <div className={classNames(styles.Chat, 'flex flex-col flex-grow min-w-[var(--chat-min-width)] h-full')}>
             {!chatStarted && (
               <div id="intro" className="mt-[26vh] max-w-chat mx-auto">
@@ -188,7 +188,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
               </div>
             </div>
             {!chatStarted && (
-              <div id="examples" className="border bg-[#0a380a4d] max-w-2xl relative w-full mx-auto border-[#3fff3f4d] p-4 rounded-[4px]">
+              <div id="examples" className="border bg-[#0a380a4d] max-w-2xl mb-10 relative w-full mx-auto border-[#3fff3f4d] p-4 rounded-[4px]">
                 <div className="mb-4 text-sm text-[#3fff3f] opacity-70">EXAMPLE OPERATIONS</div>
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 max-w-2xl">
                   {EXAMPLE_PROMPTS.map((examplePrompt, index) => {
