@@ -1,11 +1,37 @@
 import { Link } from '@remix-run/react';
+import { useEffect, useRef } from 'react';
+
+declare global {
+  interface Window {
+    VANTA: any;
+    THREE: any;
+  }
+}
 
 export const Home = () => {
+  const vantaRef = useRef<HTMLDivElement>(null);
+  const vantaEffectRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && vantaRef.current && window.VANTA?.FOG) {
+      vantaEffectRef.current = window.VANTA.FOG({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        THREE: window.THREE,
+      });
+    }
+
+    return () => {
+      vantaEffectRef.current?.destroy?.();
+    };
+  }, []);
+
   return (
-    <main
-      style={{ backgroundImage: "url('/home-background.gif')" }}
-      className="flex flex-col h-screen bg-cover w-screen"
-    >
+    <main ref={vantaRef} className="flex flex-col h-screen w-screen">
       <header className="self-start w-full px-12 pt-4 grid grid-cols-3 items-center">
         <h1 className="text-xl text-[#FFFFFF]">Solange</h1>
         <h5 className="uppercase mx-auto text-[#FFFFFF]/50 text-xl">Docs</h5>

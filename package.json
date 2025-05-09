@@ -74,6 +74,7 @@
     "remix-island": "^0.2.0",
     "remix-utils": "^7.6.0",
     "shiki": "^1.9.1",
+    "three": "^0.176.0",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
@@ -83,6 +84,7 @@
     "@types/diff": "^5.2.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
+    "@types/three": "^0.176.0",
     "fast-glob": "^3.3.2",
     "is-ci": "^3.0.1",
     "node-fetch": "^3.3.2",
