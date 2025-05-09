@@ -23,7 +23,7 @@ export function HeaderActionButtons({}: HeaderActionButtonsProps) {
             }
           }}
         >
-          <div className="i-bolt:chat text-sm text-[#66FF00]" />
+          <div className="i-bolt:chat text-sm text-[#BE2201]" />
         </Button>
         <div className="w-[1px] bg-bolt-elements-borderColor" />
         <Button
@@ -36,7 +36,7 @@ export function HeaderActionButtons({}: HeaderActionButtonsProps) {
             workbenchStore.showWorkbench.set(!showWorkbench);
           }}
         >
-          <div className="i-ph:code-bold text-[#66FF00]" />
+          <div className="i-ph:code-bold text-[#BE2201]" />
         </Button>
       </div>
     </div>
@@ -56,7 +56,7 @@ function Button({ active = false, disabled = false, children, onClick }: ButtonP
       className={classNames('flex items-center p-1.5', {
         'bg-bolt-elements-item-backgroundDefault hover:bg-bolt-elements-item-backgroundActive text-bolt-elements-textTertiary hover:text-bolt-elements-textPrimary':
           !active,
-        'bg-bolt-elements-item-backgroundAccent text-[#66FF00]': active && !disabled,
+        'bg-bolt-elements-item-backgroundAccent text-[#BE2201]': active && !disabled,
         'bg-bolt-elements-item-backgroundDefault text-alpha-gray-20 dark:text-alpha-white-20 cursor-not-allowed':
           disabled,
       })}

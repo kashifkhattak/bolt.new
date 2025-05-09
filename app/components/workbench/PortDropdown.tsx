@@ -67,7 +67,7 @@ export const PortDropdown = memo(
                 <span
                   className={
                     activePreviewIndex === preview.index
-                      ? 'text-[#66FF00]'
+                      ? 'text-[#BE2201]'
                       : 'text-bolt-elements-item-contentDefault group-hover:text-bolt-elements-item-contentActive'
                   }
                 >

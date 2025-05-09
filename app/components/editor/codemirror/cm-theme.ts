@@ -26,7 +26,7 @@ function getEditorTheme(settings: EditorSettings) {
     '&.cm-editor': {
       height: '100%',
       background: 'var(--cm-backgroundColor)',
-      color: '#66FF00',
+      color: '#BE2201',
     },
     '.cm-cursor': {
       borderLeft: 'var(--cm-cursor-width) solid var(--cm-cursor-backgroundColor)',
@@ -38,11 +38,11 @@ function getEditorTheme(settings: EditorSettings) {
       },
     },
     '.cm-line': {
-      color: "#66FF00 !important",
+      color: '#BE2201 !important',
       padding: '0 0 0 4px',
     },
     '.cm-line > span': {
-      color: "#66FF00 !important",
+      color: '#BE2201 !important',
     },
     '&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground': {
       backgroundColor: 'var(--cm-selection-backgroundColorFocused) !important',
@@ -61,7 +61,7 @@ function getEditorTheme(settings: EditorSettings) {
     '.cm-gutters': {
       background: 'var(--cm-gutter-backgroundColor)',
       borderRight: 0,
-      color: '#66FF00',
+      color: '#BE2201',
     },
     '.cm-gutter': {
       '&.cm-lineNumbers': {
@@ -71,7 +71,7 @@ function getEditorTheme(settings: EditorSettings) {
       },
       '& .cm-activeLineGutter': {
         background: 'transparent',
-        color: '#66FF00',
+        color: '#BE2201',
       },
       '&.cm-foldGutter .cm-gutterElement > .fold-icon': {
         cursor: 'pointer',

@@ -33,21 +33,21 @@ export const Home = () => {
   return (
     <main ref={vantaRef} className="flex flex-col h-screen w-screen">
       <header className="self-start w-full px-12 pt-4 grid grid-cols-3 items-center">
-        <h1 className="text-xl text-[#FFFFFF]">Solange</h1>
-        <h5 className="uppercase mx-auto text-[#FFFFFF]/50 text-xl">Docs</h5>
-        <h5 className="uppercase ml-auto text-[#FFFFFF]/50 text-xl">Whitepaper</h5>
+        <h1 className="text-xl text-black">Solange</h1>
+        <h5 className="uppercase mx-auto text-black/50 text-xl">Docs</h5>
+        <h5 className="uppercase ml-auto text-black/50 text-xl">Whitepaper</h5>
       </header>
       <section className="grow h-full flex flex-col items-center justify-center">
-        <h1 className="font-bold mb-6 text-6xl text-[#FFFFFF] sm:text-8xl">Solange</h1>
-        <p className="text-[#FFFFFF] text-sm sm:text-xl max-w-lg text-center mb-12">
+        <h1 className="font-bold mb-6 text-6xl text-black sm:text-8xl">Solange</h1>
+        <p className="text-black text-sm sm:text-xl max-w-lg text-center mb-12">
           The ultimate telegram trading bot for <br /> trading on Hyperliquid and <br /> Hyperevm.
         </p>
         <div className="flex items-center gap-8 justify-center">
-          <button className="px-8 py-3 font-semibold bg-[#BE2201] text-[#FFFFFF] hover:bg-[#be2001b7] rounded-md flex items-center gap-2 transition-colors shadow-lg hover:shadow-xl mb-8">
+          <button className="px-8 py-3 font-semibold bg-[#BE2201] text-black hover:bg-[#be2001b7] rounded-md flex items-center gap-2 transition-colors shadow-lg hover:shadow-xl mb-8">
             <span className="font-medium">Start Trading</span>
           </button>
           <Link to="/build">
-            <button className="px-8 py-3 font-semibold bg-[#BE2201] text-[#FFFFFF] hover:bg-[#be2001b7] rounded-md flex items-center gap-2 transition-colors shadow-lg hover:shadow-xl mb-8">
+            <button className="px-8 py-3 font-semibold bg-[#BE2201] text-black hover:bg-[#be2001b7] rounded-md flex items-center gap-2 transition-colors shadow-lg hover:shadow-xl mb-8">
               <span className="font-medium">Start Building</span>
             </button>
           </Link>
@@ -59,7 +59,7 @@ export const Home = () => {
               fill="currentColor"
               stroke-width="0"
               viewBox="0 0 512 512"
-              className="w-6 h-6 text-[#FFFFFF] hover:text-gray-300 transition-colors"
+              className="w-6 h-6 text-black hover:text-gray-300 transition-colors"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ export const Home = () => {
               fill="currentColor"
               stroke-width="0"
               viewBox="0 0 256 256"
-              className="w-6 h-6 text-[#FFFFFF] hover:text-gray-300 transition-colors"
+              className="w-6 h-6 text-black hover:text-gray-300 transition-colors"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"

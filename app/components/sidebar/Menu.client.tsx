@@ -112,7 +112,7 @@ export function Menu() {
         <div className="p-4">
           <a
             href="/"
-            className="flex gap-2 items-center bg-[#66FF00] text-black hover:bg-[#66FF00] hover:text-black rounded-md p-2 transition-theme"
+            className="flex gap-2 items-center bg-[#BE2201] text-black hover:bg-[#BE2201] hover:text-black rounded-md p-2 transition-theme"
           >
             <span className="inline-block i-bolt:chat scale-110" />
             Start new chat

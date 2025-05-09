@@ -20,13 +20,13 @@ const customIconCollection = iconPaths.reduce(
 );
 
 const BASE_COLORS = {
-  white: '#66FF00',
+  white: '#BE2201',
   gray: {
     50: '#FAFAFA',
     100: '#F5F5F5',
     200: '#E5E5E5',
     300: '#D4D4D4',
-    400: '#66FF00',
+    400: '#BE2201',
     500: '#737373',
     600: '#525252',
     700: '#404040',
@@ -40,9 +40,9 @@ const BASE_COLORS = {
     200: '#BAE7FF',
     300: '#8ADAFF',
     400: '#53C4FF',
-    500: '#66FF00',
+    500: '#BE2201',
     600: '#1488FC',
-    700: '#66FF00',
+    700: '#BE2201',
     800: '#1259BB',
     900: '#154E93',
     950: '#122F59',

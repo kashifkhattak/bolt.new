@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-imports */
 import type { Message } from 'ai';
 import React, { type RefCallback } from 'react';
 import { ClientOnly } from 'remix-utils/client-only';
@@ -113,7 +114,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                 >
                   <textarea
                     ref={textareaRef}
-                    className={`w-full pl-4 pt-4 pr-16 focus:outline-none resize-none text-md text-[#66FF00] placeholder:text-[#66FF00]/50 bg-transparent`}
+                    className={`w-full pl-4 pt-4 pr-16 focus:outline-none resize-none text-md text-[#FFFFFF] placeholder:text-[#FFFFFF]/50 bg-transparent`}
                     onKeyDown={(event) => {
                       if (event.key === 'Enter') {
                         if (event.shiftKey) {
@@ -133,7 +134,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                       minHeight: TEXTAREA_MIN_HEIGHT,
                       maxHeight: TEXTAREA_MAX_HEIGHT,
                     }}
-                    placeholder="How can Frens help you today?"
+                    placeholder="How can Solange help you today?"
                     translate="no"
                   />
                   <ClientOnly>
@@ -159,8 +160,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                         disabled={input.length === 0 || enhancingPrompt}
                         className={classNames({
                           'opacity-100!': enhancingPrompt,
-                          'text-black! pr-1.5 enabled:hover:bg-bolt-elements-item-backgroundAccent!':
-                            promptEnhanced,
+                          'text-black! pr-1.5 enabled:hover:bg-bolt-elements-item-backgroundAccent!': promptEnhanced,
                         })}
                         onClick={() => enhancePrompt?.()}
                       >
@@ -188,8 +188,11 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
               </div>
             </div>
             {!chatStarted && (
-              <div id="examples" className="border bg-[#0a380a4d] max-w-2xl mb-10 relative w-full mx-auto border-[#3fff3f4d] p-4 rounded-[4px]">
-                <div className="mb-4 text-sm text-[#3fff3f] opacity-70">EXAMPLE OPERATIONS</div>
+              <div
+                id="examples"
+                className="border bg-[#BE22014D] max-w-2xl mb-10 relative w-full mx-auto border-[#000000f4d] p-4 rounded-[4px]"
+              >
+                <div className="mb-4 text-sm text-[#FFFFFF] opacity-70">EXAMPLE OPERATIONS</div>
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 max-w-2xl">
                   {EXAMPLE_PROMPTS.map((examplePrompt, index) => {
                     return (
@@ -199,13 +202,13 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                           sendMessage?.(event, examplePrompt.text);
                         }}
                         style={{ fontFamily: 'Inter' }}
-                        className="cursor-pointer overflow-hidden rounded opacity-70 group relative aspect-square border-2 border-[#3fff3f] bg-[#0a380a] transition-all duration-200 hover:bg-[#0f4b0f]"
+                        className="cursor-pointer overflow-hidden rounded opacity-70 group relative aspect-square border-2 border-black bg-[#BE2201]/60 transition-all duration-200 hover:bg-[#BE2201]/80"
                       >
                         <div className="absolute inset-0 flex flex-col items-center justify-center">
-                          <div className="text-2xl text-[#3fff3f] i-ph:terminal-window-bold">
+                          <div className="text-2xl text-[#FFFFFF] i-ph:terminal-window-bold">
                             <img src={examplePrompt.icon} />
                           </div>
-                          <div className="mt-2 text-xs font-bold tracking-wide text-[#3fff3f]">
+                          <div className="mt-2 text-xs font-bold tracking-wide text-[#FFFFFF]">
                             {examplePrompt.label}
                           </div>
                         </div>
