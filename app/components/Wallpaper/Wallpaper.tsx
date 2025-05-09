@@ -192,7 +192,10 @@ export const Wallpaper = () => {
                     <strong>Product Hunt:</strong>
                   </li>
                   <li>
-                    <strong>Discord:</strong>
+                    <strong>Discord:</strong>{' '}
+                    <a className="text-[#c94730] hover:underline" href="https://discord.gg/44jd6vv83e" target="__blank">
+                      https://discord.gg/44jd6vv83e
+                    </a>
                   </li>
                   <li>
                     <strong>Github:</strong>
