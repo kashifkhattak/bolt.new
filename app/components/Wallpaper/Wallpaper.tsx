@@ -180,9 +180,6 @@ export const Wallpaper = () => {
                     </a>
                   </li>
                   <li>
-                    <strong>Telegram:</strong>
-                  </li>
-                  <li>
                     <strong>Twitter/X:</strong>{' '}
                     <a className="text-[#c94730] hover:underline" href="https://x.com/solange_io" target="__blank">
                       https://x.com/solange_io
@@ -198,7 +195,14 @@ export const Wallpaper = () => {
                     </a>
                   </li>
                   <li>
-                    <strong>Github:</strong>
+                    <strong>Github:</strong>{' '}
+                    <a
+                      className="text-[#c94730] hover:underline"
+                      href=" https://github.com/thesimsguy/Solangeai"
+                      target="__blank"
+                    >
+                      https://github.com/thesimsguy/Solangeai
+                    </a>
                   </li>
                 </ul>
               </section>
