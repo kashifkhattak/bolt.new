@@ -35,7 +35,9 @@ export const Home = () => {
       <header className="self-start w-full px-12 pt-4 grid grid-cols-3 items-center">
         <h1 className="text-xl text-black">Solange</h1>
         <div />
-        <div />
+        <Link to="/wallpaper" className="ml-auto">
+          <h5 className="uppercase text-black/50 text-xl">Whitepaper</h5>
+        </Link>
       </header>
       <section className="grow h-full flex flex-col items-center justify-center">
         <h1 className="font-bold mb-6 text-6xl text-black sm:text-8xl">Solange</h1>
