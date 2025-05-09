@@ -6,25 +6,19 @@ export const Wallpaper = () => {
   const executiveRef = useRef<HTMLDivElement>(null);
   const platformRef = useRef<HTMLDivElement>(null);
   const hypercoreRef = useRef<HTMLDivElement>(null);
-  const uniqueRef = useRef<HTMLDivElement>(null);
   const tokenomicsRef = useRef<HTMLDivElement>(null);
-  const flareTokenRef = useRef<HTMLDivElement>(null);
-  const communityLinksRef = useRef<HTMLDivElement>(null);
 
   const sections = [
     { name: 'solange-whitepaper', ref: introductionRef },
     { name: 'executive-summary', ref: executiveRef },
     { name: 'platform-highlights', ref: platformRef },
     { name: 'built-for-solana', ref: hypercoreRef },
-    { name: 'why-solange', ref: uniqueRef },
     { name: 'join-the-solange-community', ref: tokenomicsRef },
-    { name: 'solange-whitepaper', ref: flareTokenRef },
-    { name: 'community-links', ref: communityLinksRef },
   ];
 
   const activeId = useScrollSpy(
     sections.map((section) => section.name),
-    25,
+    10,
   );
 
   return (
@@ -73,7 +67,7 @@ export const Wallpaper = () => {
           </aside>
           <section className="w-full md:w-[calc(100%-16rem)] max-w-3xl mx-auto py-12 px-6 md:px-8">
             <article className="space-y-16 text-base leading-relaxed">
-              <section ref={introductionRef} id="introduction">
+              <section ref={introductionRef} id="solange-whitepaper">
                 <h1 className="text-3xl md:text-4xl font-bold mb-4">Solange Whitepaper</h1>
                 <p className="text-lg text-gray-300 mb-6">
                   The all-in-one platform for trading and building on Solana.
@@ -124,7 +118,7 @@ export const Wallpaper = () => {
                   </li>
                 </ul>
               </section>
-              <section ref={hypercoreRef} id="hypercore-&-hyperevm">
+              <section ref={hypercoreRef} id="built-for-solana">
                 <h2 className="text-2xl md:text-3xl font-semibold mb-4">Built for Solana</h2>
                 <p className="text-gray-300">
                   Solange is tightly integrated with Solana's high-performance blockchain and the top tools in its
@@ -171,7 +165,7 @@ export const Wallpaper = () => {
                   </li>
                 </ul>
               </section>
-              <section ref={uniqueRef} id="unique-value">
+              <section ref={tokenomicsRef} id="join-the-solange-community">
                 <h2 className="text-2xl md:text-3xl font-semibold mb-4">Join the Solange Community</h2>
                 <p className="text-gray-300">
                   Solange is more than a tool—it's a gateway to building, trading, and scaling on Solana with less

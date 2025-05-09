@@ -40,7 +40,7 @@ export const Home = () => {
       <section className="grow h-full flex flex-col items-center justify-center">
         <h1 className="font-bold mb-6 text-6xl text-black sm:text-8xl">Solange</h1>
         <p className="text-black text-sm sm:text-xl max-w-lg text-center mb-12">
-          The ultimate telegram trading bot for <br /> trading on Hyperliquid and <br /> Hyperevm.
+          The all-in-one Solana platform for <br /> trading, building, and automating <br /> fast, simple, powerful..
         </p>
         <div className="flex items-center gap-8 justify-center">
           <Link to="/wallpaper">
@@ -55,7 +55,7 @@ export const Home = () => {
           </Link>
         </div>
         <div className="flex items-center gap-8 justify-center">
-          <a href="https://x.com/flareai_xyz" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/solange_io" target="_blank" rel="noopener noreferrer">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -99,7 +99,7 @@ export const Home = () => {
               </g>
             </svg>
           </a>
-          <a>
+          <a href="https://discord.gg/44jd6vv83e" target="_blank" rel="noopener noreferrer">
             <svg
               className="w-9 h-9 text-black hover:text-gray-300 transition-colors"
               width="64px"
