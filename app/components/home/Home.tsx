@@ -45,11 +45,11 @@ export const Home = () => {
           The all-in-one Solana platform for <br /> trading, building, and automating <br /> fast, simple, powerful..
         </p>
         <div className="flex items-center gap-8 justify-center">
-          <Link to="/wallpaper">
+          <a href="https://t.me/solangeaibot" target="__blank">
             <button className="px-8 py-3 font-semibold bg-[#BE2201] text-[#FFFFFF] hover:bg-[#be2001b7] rounded-md flex items-center gap-2 transition-colors shadow-lg hover:shadow-xl mb-8">
               <span className="font-medium">Start Trading</span>
             </button>
-          </Link>
+          </a>
           <Link to="/build">
             <button className="px-8 py-3 font-semibold bg-[#BE2201] text-[#FFFFFF] hover:bg-[#be2001b7] rounded-md flex items-center gap-2 transition-colors shadow-lg hover:shadow-xl mb-8">
               <span className="font-medium">Start Building</span>
