@@ -11,6 +11,10 @@ $code-font-size: 13px;
   line-height: 1.6;
   color: var(--bolt-elements-textPrimary);
 
+  > :first-of-type {
+    color: white;
+  }
+
   > *:not(:last-child) {
     margin-block-end: 16px;
   }

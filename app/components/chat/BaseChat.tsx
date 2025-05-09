@@ -160,7 +160,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                         disabled={input.length === 0 || enhancingPrompt}
                         className={classNames({
                           'opacity-100!': enhancingPrompt,
-                          'text-black! pr-1.5 enabled:hover:bg-bolt-elements-item-backgroundAccent!': promptEnhanced,
+                          'text-white! pr-1.5 enabled:hover:bg-bolt-elements-item-backgroundAccent!': promptEnhanced,
                         })}
                         onClick={() => enhancePrompt?.()}
                       >
@@ -202,7 +202,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                           sendMessage?.(event, examplePrompt.text);
                         }}
                         style={{ fontFamily: 'Inter' }}
-                        className="cursor-pointer overflow-hidden rounded opacity-70 group relative aspect-square border-2 border-black bg-[#BE2201]/60 transition-all duration-200 hover:bg-[#BE2201]/80"
+                        className="cursor-pointer overflow-hidden rounded opacity-70 group relative aspect-square border-2 border-red-800 bg-[#BE2201]/60 transition-all duration-200 hover:bg-[#BE2201]/80"
                       >
                         <div className="absolute inset-0 flex flex-col items-center justify-center">
                           <div className="text-2xl text-[#FFFFFF] i-ph:terminal-window-bold">

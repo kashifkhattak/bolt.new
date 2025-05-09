@@ -47,9 +47,7 @@ const SliderButton = memo(({ selected, children, setSelected }: SliderButtonProp
       onClick={setSelected}
       className={classNames(
         'bg-transparent text-sm px-2.5 py-0.5 rounded-full relative',
-        selected
-          ? 'text-black'
-          : 'text-bolt-elements-item-contentDefault hover:text-bolt-elements-item-contentActive',
+        selected ? 'text-black' : 'text-bolt-elements-item-contentDefault hover:text-bolt-elements-item-contentActive',
       )}
     >
       <span className="relative z-10">{children}</span>
